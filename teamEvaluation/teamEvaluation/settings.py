@@ -97,14 +97,13 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.TokenAuthentication',
-
     )
 }
 
 
 SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ["Bearer"],
-    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(seconds=40),
+    "ACCESS_TOKEN_LIFETIME": datetime.timedelta(hours=3),
     "REFRESH_TOKEN_LIFETIME":datetime.timedelta(days=1),
 }
 
