@@ -8,3 +8,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 		model = Project
 		fields = '__all__'
 
+class UpdateProjectSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Project
+		fields = ['name', 'weight']
