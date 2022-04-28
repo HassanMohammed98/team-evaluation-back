@@ -15,11 +15,13 @@ Including another URLconf
 """
 
 from django.urls import path, include
-from .views import ProjectsList
+from .views import ProjectsList, ProjectCreateAPIView
 
 
 urlpatterns = [
 
     path('', ProjectsList.as_view(), name="projects-list"),
+    path('create/', ProjectCreateAPIView.as_view(), name="semesters-list"),
+
 
 ]

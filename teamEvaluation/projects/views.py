@@ -13,7 +13,7 @@ class ProjectsList(ListAPIView):
 	queryset = Project.objects.all()
 	serializer_class = ProjectSerializer
 
-class UserCreateAPIView(CreateAPIView):
+class ProjectCreateAPIView(CreateAPIView):
     serializer_class = UpdateProjectSerializer
     
     def perform_create(self, serializer):
